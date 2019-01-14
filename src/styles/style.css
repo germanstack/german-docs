@@ -1,0 +1,293 @@
+.pull-right{
+    position: absolute;
+    right: 0;   
+}
+
+ul li{
+    list-style-type: none;
+}
+
+.navbar{
+    height: 63px !important;
+    top: 0px !important;
+    width: 100% !important;
+}
+
+.bg-default{
+    background-color: #010182!important;
+}
+
+.no-decoration{
+    text-decoration: none;
+}
+
+.no-decoration:hover{
+    text-decoration: none;
+}
+
+.navbar-brand img{
+    position: absolute;
+    top: 7px;
+}
+
+.navbar-toggler{
+    position: fixed;
+}
+
+.nav-drop-down{
+    position: absolute;
+    top: 53px;
+    background: #000072b8!important;
+    width: 400px;
+    height: fit-content;
+    margin: 0px auto;
+    right: 0px;
+    border-bottom: 1px solid gray;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: white;
+    box-shadow: 0px 3px 3px 0px grey;
+    transition: display 2s ease-in-out;
+}
+
+.nav-drop-down ul li{
+    list-style-type: none;
+    padding: 15px;
+    transition: background-color 1s linear;
+
+}
+.nav-drop-down ul li:nth-last-child(4){
+    margin-bottom: 10px;
+}
+
+.nav-drop-down ul li:hover{
+    background-color: white;
+    cursor: pointer;
+}
+
+
+.nav-drop-down ul li a{
+    color: white;
+}
+.nav-drop-down ul li:hover a{
+ color: #000072b8 !important;
+text-decoration: none;
+}
+
+
+.nav-link{
+    color: white !important;
+}
+
+.nav-link a:hover{
+    color: rgb(87, 117, 255)
+}
+
+.sidebar-wrapper{
+    background: #fbfafc;
+    width: 300px;
+    height: 100%;
+    top: 63px;
+    left: -1px;
+    position: fixed;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: 1px solid #ebeae7;
+}
+
+.sidebar{
+    margin: 25px 0px 0px 0px ;
+}
+
+.sidebar-item{
+    list-style-type: none;
+    cursor: pointer;
+    left: 30px;
+    text-transform: uppercase;
+    position: relative;
+    border-bottom: 1px solid white;
+    -webkit-border-before: unset;
+    border-block-start: unset;
+    padding: 10px 0px 10px 0px;
+    color: rebeccapurple;
+    margin: 10px 0px 25px 0px;
+    font-size: 0.8rem;
+}
+
+.sidebar-item:hover{
+    color: #010182;
+    cursor: pointer;
+}
+
+
+.fnt-12{
+    font-size: 12px;
+    color: #010182;
+}
+
+
+.post{
+    position: relative;
+    left: 100px;
+    width: 60%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 20px;
+    top: 54px;
+    text-align: justify;
+    margin: 0 auto;
+}
+
+.nav-img{
+    width: 40px;
+    border-radius: 50px;
+    padding: 4px;
+    border: 3px inset white;
+}
+
+.navbar-nav{
+    margin: 10px 10px 0px 0px !important;
+}
+
+.fixed{
+    position: fixed;
+    z-index: 1;
+}
+
+.menu{
+    background: #eeeeee;
+    padding: 10px;
+    margin: 0;
+    left: -30px;
+    position: relative;
+    transition: display 1s ease-in;
+}
+
+
+.menu ul li{
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+}
+
+.menu ul li a:hover{
+    text-decoration: none;
+}
+
+.toggle-side{
+    background: #010182;
+    color: white;
+    border-radius: 50px;
+    height: 50px;
+    bottom: 7px;
+    width: 50px;
+    right: 10px;
+    outline: 0px solid;
+    box-shadow: -7px 1px 10px -5px grey;
+    z-index: 99999;
+}
+
+.toggle-side:hover{
+    background: #010182;
+}
+
+button[type="button"]{
+    outline: 0px solid;  
+}
+
+.footer{
+    text-align: center;
+    /* position: absolute; */
+    bottom: -50px;
+    position: relative;
+    padding: 10px;
+    color: rebeccapurple;
+}
+
+
+.ger{
+    text-align: left;
+    padding: 10px;
+    color: rebeccapurple;
+}
+
+.options{
+    right : 11px !important;
+}
+/*small screens*/
+@media only screen and (max-width : 600px){
+    .pull-right{
+      
+        left: 0;
+    }
+    .post{
+        left : 0;
+        width: 100%;
+    }
+    .collapse:not(.show){
+        display:  none;
+    }
+    .toggle-side{
+       left: 315px;
+     z-index: 99999;
+    }
+
+    .nav-img{
+        right: 10px;
+        top: -3px;
+        position: absolute;
+    }
+
+    .sm-hidden{
+        display: none;
+    }
+
+    .sidebar-wrapper{
+        top : 0px;
+        z-index: 9999;
+    }
+}
+
+
+
+@media only screen and (max-width : 768px){
+    .post{
+        left : 0;
+        width: 100%;
+    }
+
+    .toggle-side{
+       
+      z-index: 99999;
+     }
+    .sidebar-wrapper{
+        top : 0px;
+        z-index: 9999;
+    }
+
+    .sm-hidden{
+        display: none;
+    }
+}
+
+@media only screen and (max-width : 1024px){
+    .post{
+        left : 0;
+        width: 100%;
+    }
+
+    .toggle-side{
+        left: 83%;
+      z-index: 99999;
+     }
+
+    .sm-hidden{
+        display: none;
+    }
+
+    .sidebar-wrapper{
+        top : 0px;
+        z-index: 9999;
+    }
+}
