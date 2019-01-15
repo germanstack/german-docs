@@ -1,32 +1,22 @@
-
 sudo: required
-
 env:
   global:
-
-    # AZURE_WA_USERNAME, AZURE_WA_PASSWORD, AZURE_WA_SITE, AZURE_WA_SLOT
-    - secure: "n10tEkF0tH4K/c7SznWSI2eBsiDXp8rM+e22Hooo0hzMIQJ4wyJYfLzQBRLrplC2rXgWwIC1YJ++QlMJtZjnRwR4w6lo/nakWS6J8IaeTxRUyYK+B/O3NcIozFIoNuLSWzjs/RPNt6kHJkqbXjlCvvYa0ZCx06sme4VnAPJFeEqHcO80HmAuZIjyfWDMK0ds8R1Uyk5yGaQbCPqKXpMm1qLmLP1tu+KIXajx0KC2qLY3Apfu4U2giqF8n2nnySCDZ3ZHloWtsGq6O8nvqOPOKGI7Ii7u1o6cZHB/R543OiH+/FOwFCYzXOB5v0NagWE5/WppvILk8dws/JOlO73L7uPHDm6G0OyXkzcpwtYPOU/h7McTvVC3svUNOlCxvTMStHq2N9xPQnIYBk8NcXTfXYUdkuzLG6ZFTxwicFg8n9ivzBb9hg4olLAX/v+GBQtvf/bFR9XpY1gdC9Jrj9VF4EHtR1J4pSS69meOhhXDckGvwAWvuCc6SmCfPRdw8ob1fXR2NO+D7L1KY50yze+zFB5xbev8Apz7MKQUkmQAz/DAfMKMlql5u1fC3SEyVA7T8CNjcIW6W0Nhyvcp//zeBdCSqDZDYmepr7Ctsov6QyLtWVa4Gge44SPdSzTpsDa4xq3liN7qLCenTWqbRY2DuBSYkkydN9KS/l6qjFRxOYQ="
-
-
+  - secure: n10tEkF0tH4K/c7SznWSI2eBsiDXp8rM+e22Hooo0hzMIQJ4wyJYfLzQBRLrplC2rXgWwIC1YJ++QlMJtZjnRwR4w6lo/nakWS6J8IaeTxRUyYK+B/O3NcIozFIoNuLSWzjs/RPNt6kHJkqbXjlCvvYa0ZCx06sme4VnAPJFeEqHcO80HmAuZIjyfWDMK0ds8R1Uyk5yGaQbCPqKXpMm1qLmLP1tu+KIXajx0KC2qLY3Apfu4U2giqF8n2nnySCDZ3ZHloWtsGq6O8nvqOPOKGI7Ii7u1o6cZHB/R543OiH+/FOwFCYzXOB5v0NagWE5/WppvILk8dws/JOlO73L7uPHDm6G0OyXkzcpwtYPOU/h7McTvVC3svUNOlCxvTMStHq2N9xPQnIYBk8NcXTfXYUdkuzLG6ZFTxwicFg8n9ivzBb9hg4olLAX/v+GBQtvf/bFR9XpY1gdC9Jrj9VF4EHtR1J4pSS69meOhhXDckGvwAWvuCc6SmCfPRdw8ob1fXR2NO+D7L1KY50yze+zFB5xbev8Apz7MKQUkmQAz/DAfMKMlql5u1fC3SEyVA7T8CNjcIW6W0Nhyvcp//zeBdCSqDZDYmepr7Ctsov6QyLtWVa4Gge44SPdSzTpsDa4xq3liN7qLCenTWqbRY2DuBSYkkydN9KS/l6qjFRxOYQ=
+  - secure: guA+LmFN4XJuIauddnE4ldFmQmJLcLgf4I1en1pIbstZwKiDjJ+A5P4Xqt8nemAUDWehXdXPcWaj28gyaa+qHfQ6yr3cODB8wWSSm/cho+PVjeIm3SnJ/S4hvRnXMTYPGFGeY5PgESjrzq26NZMYbchQH5mpoHmzHLz6XW3Oy8Cb/95UymW7uDNJtDrZsS4CJ8HPdsJ0UQh6huuCBfXoFgY+lN507gH4pdAOrg7YNlCmpmZ4BoiwNaFWsHANs5Xtv6fkWS7n5HLttq7rVsQWC2JsMcogl9pUm13nkDhXq4bYc73bLE50l1i8qJwJHKh4qLryhCPF3L+6N4utSSxRxywAxMfPyZBTKHT2vezuQSccMVdrP8692F6rTHzUm9qsIvcePn/Oviualbe7ajYEn+qz0moMyXPJkGcPIYuwPCNigtgrc27E6XAnn9OP4OHN8rD7aZG99cc9mZY9jo273YPpyXPyr40z8Jm3Gm4FCYnLHtNSKYvsF8KPp/MO6xCVwvz/egP/fD0rqiayO9Qx+IRs4MH090CuYeNrYgLD5kRVYQ0w4ovZL2HUXXqMxa4Muh8dGNC2WSmdxigumykSb26mVErNLTrIK8QIMlixiPevBJfZOjPW1fw5saVC5eH7Xrw5T8ZfbftDVEJp398DGFfce2wmVV7mTWVkmhkFNKQ=
 before_install:
-  - AZ_REPO=$(lsb_release -cs) && echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $AZ_REPO main" | sudo tee /etc/apt/sources.list.d/azure-cli.list
-  - curl -L https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-  - sudo apt-get install apt-transport-https
-  - sudo apt-get update && sudo apt-get install azure-cli
-
-
+- AZ_REPO=$(lsb_release -cs) && echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/
+  $AZ_REPO main" | sudo tee /etc/apt/sources.list.d/azure-cli.list
+- curl -L https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+- sudo apt-get install apt-transport-https
+- sudo apt-get update && sudo apt-get install azure-cli
 deploy:
-  - provider: azure_web_apps
-  - verbose : true
-
+- provider: azure_web_apps
+- verbose: true
 script:
- - yarn build 
-
+- yarn build
 language: node_js
-
 node_js: lts/*
-
-notifications: 
-  email: 
-    on_failure : always
-    on_success : always
+notifications:
+  email:
+    on_failure: always
+    on_success: always
