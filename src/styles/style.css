@@ -215,12 +215,20 @@ button[type="button"]{
 .options{
     right : 11px !important;
 }
+
+.header{
+    display: inline-flex;
+}
+
+.pull-edit-right{
+    position: absolute;
+    right: 10px;
+    top: 9px;
+    padding: 4px;
+}
 /*small screens*/
 @media only screen and (max-width : 600px){
-    .pull-right{
-      
-        left: 0;
-    }
+
     .post{
         left : 0;
         width: 100%;
@@ -233,11 +241,6 @@ button[type="button"]{
      z-index: 99999;
     }
 
-    .nav-img{
-        right: 10px;
-        top: -3px;
-        position: absolute;
-    }
 
     .sm-hidden{
         display: none;

@@ -1,4 +1,5 @@
 module.exports = {
+    pathPrefix: "https://github.com/germanstack/german-docs",
     siteMetadata: {
         title: `Panda Eats Alot`,
     },

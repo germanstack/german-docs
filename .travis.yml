@@ -1,0 +1,37 @@
+
+sudo: required
+
+env:
+  global:
+
+    # AZURE_WA_USERNAME, AZURE_WA_PASSWORD, AZURE_WA_SITE, AZURE_WA_SLOT
+    - secure: "Bx6tfqQJYjlSofs3wEr2iqWx75HuR+Qtybomc97ueGxlkHjCXKF2A7one9ykwm+EVdJGVPLKM4bvS2ebqeNSPFSNyZbajXLV24lXgXsA3UVsXI3kBDkKG/bouyuQWvCeYAKF1XSbQM3513XbYSDWCdO72IkB5E961nvKCkLcsvJ+WGeE+3YtigK8ThHlzcM9Twt22y7ZQa4Y429uR6I1tAYzYkp4XHG/SO0tb9SAdGDg"
+
+    # AZURE_SERVICE_PRINCIPAL, AZURE_SERVICE_PRINCIPAL_PASSWORD, AZURE_TENANT
+    - secure: "AZZj6fRlKTVlgdmF7QeYCz/fZZ9Z8WIGrz0wRGX1vz6DB7EcvmyNbdH6RKQ4Wt2OIp+/R0u/opdQfRwyQvQuAVNK3PmGDXqiiXkKhYPHIMN35A4+iIRx+bg+gIYotEdAkux307/Qd5s7BlYDGGGRmClml74u7UHM6nCz9kql8lWrJ92yN5YaPXsKwvdnmCuRAIzVZ8kWCi24VW1"
+
+before_install:
+  - AZ_REPO=$(lsb_release -cs) && echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $AZ_REPO main" | sudo tee /etc/apt/sources.list.d/azure-cli.list
+  - curl -L https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+  - sudo apt-get install apt-transport-https
+  - sudo apt-get update && sudo apt-get install azure-cli
+
+
+deploy:
+  provider: azure_web_apps
+  username: $docs-germanstack      # If AZURE_WA_USERNAME isn't set
+  password: y7YoHpABSHLon19pGjnzwL3WfclwYSWxh2T8Yiwstl5jfomemDCcjcKuahxX  # If AZURE_WA_PASSWORD isn't set
+  site: docs-germanstack      # If AZURE_WA_SITE isn't set
+  verbose : true
+
+script:
+ - yarn build 
+
+language: node_js
+
+node_js: lts/*
+
+notifications: 
+  email: 
+    on_failure : always
+    on_success : always

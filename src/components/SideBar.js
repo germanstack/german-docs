@@ -25,7 +25,7 @@ export default class AppSideBar extends Component {
         collapse: true,
         icon : "fa-expand-arrows-alt"
        })
-      console.log(this.state);
+    
     }
   }
 

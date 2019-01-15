@@ -7,6 +7,7 @@
   "scripts": {
     "develop": "gatsby develop",
     "start": "npm run develop",
+    "deploy" : "gatsby build --prefix-paths && gh-pages -d public",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
@@ -33,9 +34,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/germanstack/docs"
+    "url": "https://github.com/germanstack/german-docs"
   },
   "bugs": {
-    "url": "https://github.com/germanstack/docs"
+    "url": "https://github.com/germanstack/german-docs"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
   }
 }
