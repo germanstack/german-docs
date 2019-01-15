@@ -5,10 +5,8 @@ env:
   global:
 
     # AZURE_WA_USERNAME, AZURE_WA_PASSWORD, AZURE_WA_SITE, AZURE_WA_SLOT
-    - secure: "Bx6tfqQJYjlSofs3wEr2iqWx75HuR+Qtybomc97ueGxlkHjCXKF2A7one9ykwm+EVdJGVPLKM4bvS2ebqeNSPFSNyZbajXLV24lXgXsA3UVsXI3kBDkKG/bouyuQWvCeYAKF1XSbQM3513XbYSDWCdO72IkB5E961nvKCkLcsvJ+WGeE+3YtigK8ThHlzcM9Twt22y7ZQa4Y429uR6I1tAYzYkp4XHG/SO0tb9SAdGDg"
+    - secure: "n10tEkF0tH4K/c7SznWSI2eBsiDXp8rM+e22Hooo0hzMIQJ4wyJYfLzQBRLrplC2rXgWwIC1YJ++QlMJtZjnRwR4w6lo/nakWS6J8IaeTxRUyYK+B/O3NcIozFIoNuLSWzjs/RPNt6kHJkqbXjlCvvYa0ZCx06sme4VnAPJFeEqHcO80HmAuZIjyfWDMK0ds8R1Uyk5yGaQbCPqKXpMm1qLmLP1tu+KIXajx0KC2qLY3Apfu4U2giqF8n2nnySCDZ3ZHloWtsGq6O8nvqOPOKGI7Ii7u1o6cZHB/R543OiH+/FOwFCYzXOB5v0NagWE5/WppvILk8dws/JOlO73L7uPHDm6G0OyXkzcpwtYPOU/h7McTvVC3svUNOlCxvTMStHq2N9xPQnIYBk8NcXTfXYUdkuzLG6ZFTxwicFg8n9ivzBb9hg4olLAX/v+GBQtvf/bFR9XpY1gdC9Jrj9VF4EHtR1J4pSS69meOhhXDckGvwAWvuCc6SmCfPRdw8ob1fXR2NO+D7L1KY50yze+zFB5xbev8Apz7MKQUkmQAz/DAfMKMlql5u1fC3SEyVA7T8CNjcIW6W0Nhyvcp//zeBdCSqDZDYmepr7Ctsov6QyLtWVa4Gge44SPdSzTpsDa4xq3liN7qLCenTWqbRY2DuBSYkkydN9KS/l6qjFRxOYQ="
 
-    # AZURE_SERVICE_PRINCIPAL, AZURE_SERVICE_PRINCIPAL_PASSWORD, AZURE_TENANT
-    - secure: "AZZj6fRlKTVlgdmF7QeYCz/fZZ9Z8WIGrz0wRGX1vz6DB7EcvmyNbdH6RKQ4Wt2OIp+/R0u/opdQfRwyQvQuAVNK3PmGDXqiiXkKhYPHIMN35A4+iIRx+bg+gIYotEdAkux307/Qd5s7BlYDGGGRmClml74u7UHM6nCz9kql8lWrJ92yN5YaPXsKwvdnmCuRAIzVZ8kWCi24VW1"
 
 before_install:
   - AZ_REPO=$(lsb_release -cs) && echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $AZ_REPO main" | sudo tee /etc/apt/sources.list.d/azure-cli.list
@@ -18,11 +16,8 @@ before_install:
 
 
 deploy:
-  provider: azure_web_apps
-  username: $docs-germanstack      # If AZURE_WA_USERNAME isn't set
-  password: y7YoHpABSHLon19pGjnzwL3WfclwYSWxh2T8Yiwstl5jfomemDCcjcKuahxX  # If AZURE_WA_PASSWORD isn't set
-  site: docs-germanstack      # If AZURE_WA_SITE isn't set
-  verbose : true
+  - provider: azure_web_apps
+  - verbose : true
 
 script:
  - yarn build 
