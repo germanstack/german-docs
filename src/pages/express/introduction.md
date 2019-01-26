@@ -63,7 +63,7 @@ sortName : "express"
                                     here</a>. </li>
 
 <li>
-                                Also notice a folder has been created <code>node-modules</code>. DO NOT Tampere with
+                                Also notice a folder has been created <code>node-modules</code>. DO NOT tamper with
                                 this folder.
                                 Don’t try editing any package in there. Messing around with the <code>node-modules</code>
                                 folder can

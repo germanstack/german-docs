@@ -42,7 +42,7 @@ sortName : "express"
                             applications going nuts in production. In a custom error handler, you must delegate to
                             the default Express error handler, when the errors have already been sent to the
                             client. </p>
-                        <p>Like every we’ve written, has three (3) arguments. Defining error-handlers requires
+                        <p><!-- Coach kindly clarify your thoughts here -->Like every we’ve written, has three (3) arguments. Defining error-handlers requires
                             four (4) argument instead of three(3) <code>(err, req, res, next)</code></p>
                         <p>Let’s add some code to our <code>index.js</code></p>
                         <div class="code-area">
@@ -81,7 +81,7 @@ sortName : "express"
                             but understanding the concept and what is, and who is? That's what makes you an awesome
                             developer.
                         </p>
-                        <p>Before we dot our 'i' and cross out 't(s)'. Let's make the API we've designed
+                        <p>Before we dot our 'i' and cross our 't(s)'. Let's make the API we've designed
                             available for consumption.
                         </p>
                         <p>Follow the steps and further explanation will done later in this course.</p>

@@ -59,8 +59,8 @@ sortName : "express"
                                 <code>next</code> can be anything, but by convention <code>next</code> is commonly
                                 used.
                             </p>
-                            <p>A middeleware also acts as a bridge between an operating system or database and
-                                applications, especially on a network. <code>app.use</code> is a bridge a between our
+                            <p>A middleware also acts as a bridge between an operating system or database and
+                                applications, especially on a network. <code>app.use</code> is a bridge between our
                                 routes and the application.</p>
                             <p>Earlier, the routes were not exposed when we first created them in <code>todo.js</code>,
                                 that's because we needed a brigde between the root app in the <code>index.js</code>
@@ -122,7 +122,7 @@ sortName : "express"
                                 <li><code>POST /todo</code></li>
                                 <div class="code-area">
                                     <code>
-                                        <p>route.<fnc>post</fnc>(<string>'/todo'</string>, <fnc>(</fnc>req, res, next<fnc>) =></fnc> {</p>
+                                        <p>route.<fnc>post</fnc>(<string>'/todo'</string>, <fnc>async (</fnc>req, res, next<fnc>) =></fnc> {</p>
                                             <p><comment><i>//</i></comment></p>
                                             <p class="indent-1">try{</p>
                                                 <p class="indent-2"><const>const</const> newTodo <fnc>= await  _.concat</fnc>(todo, req.body);</p>
