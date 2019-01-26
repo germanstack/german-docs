@@ -60,7 +60,7 @@ sortName : "express"
                                     <li><code>GET /todo</code></li>
                                     <div class="code-area">
                                         <code>
-                                                <p>route.<fnc>get</fnc>(<string>'/todo'</string>, <fnc>(</fnc>req, res, next<fnc>) =></fnc> {</p>
+                                                <p>route.<fnc>get</fnc>(<string>'/todo'</string>, <fnc> async (</fnc>req, res, next<fnc>) =></fnc> {</p>
                                                     <p><comment><i>//</i></comment></p>
                                                     <p class="indent-1">try{</p>
                                                     <p class="indent-2"><const>const</const> todos <fnc>= await</fnc> TodoModel.<fnc>find</fnc>({});</p>
@@ -93,7 +93,7 @@ sortName : "express"
                                     <li><code>POST /todo</code></li>
                                     <div class="code-area">
                                         <code>
-                                                <p>route.<fnc>post</fnc>(<string>'/todo'</string>, <fnc>(</fnc>req, res, next<fnc>) =></fnc> {</p>
+                                                <p>route.<fnc>post</fnc>(<string>'/todo'</string>, <fnc>async (</fnc>req, res, next<fnc>) =></fnc> {</p>
                                                     <p><comment><i>//</i></comment></p>
                                                     <p class="indent-1">try{</p>
                                                         <p class="indent-2"><const>const</const> newTodo <fnc>= await </fnc>TodoModel.<const>create</const>(req.body);</p>
